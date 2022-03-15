@@ -19,7 +19,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = years + "y " + weeks + "w " + days + "d " + hours + "h "
+  document.getElementById("doomsdaycounter").innerHTML = years + "y " + weeks + "w " + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
     
   // If the count down is over, write some text 
