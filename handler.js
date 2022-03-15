@@ -8,7 +8,7 @@ function DayToggle()
         toggled = true;
     }
     else{
-        document.getElementById("doomsImage").src = "css/GameImage.png";
+        document.getElementById("doomsImage").src = "css/GameImage_nuclear.png";
         toggled = false;
     }
 }
@@ -21,7 +21,7 @@ function NightToggle()
         toggled = true;
     }
     else{
-        document.getElementById("doomsImage").src = "css/GameImage.png";
+        document.getElementById("doomsImage").src = "css/GameImage_nuclear.png";
         toggled = false;
     }
 }
