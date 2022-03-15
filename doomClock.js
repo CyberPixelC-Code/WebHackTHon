@@ -1,6 +1,10 @@
 // Set the date we're counting down to
 var countDownDate = new Date("Jan 1, 2030 15:37:25").getTime();
 
+var nukegif =  "<img src='css/images/nuke.gif' style='width: 50px; height: 50px;'>";
+
+
+
 // Update the count down every 1 second
 var x = setInterval(function() {
 
@@ -17,9 +21,12 @@ var x = setInterval(function() {
   var hours = Math.floor( (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
+
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("doomsdaycounter").style.display = "inherit"; 
+       
   // Output the result in an element with id="demo"
-  document.getElementById("doomsdaycounter").innerHTML = years + "y " + weeks + "w " + days + "d " + hours + "h "
+  document.getElementById("doomsdaycounter").innerHTML =  years + "y " + weeks + "w " + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
     
   // If the count down is over, write some text 
