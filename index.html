@@ -222,21 +222,41 @@
 </div>
 
 
+<!-- Game -->
+<div class="w3-content w3-container w3-padding-64">
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m4">
+      <input type="image" name="Name of image button" src="css/GameImage_nuclear.png" onclick="changeID()">
+    </div>
+  
+    <div class="w3-col m4">
+      <img src="css/GameImage_solar.jpg">
+    </div>
+  
+    <div class="w3-col m4">
+      <img src="css/GamePhoto_wind.jpg">
+    </div>
+  </div>
+  
+  
+</div>
+
 <div class="w3-content w3-container w3-padding-64">
      <div id="game" class="w3-container">
         <div id="board">
-        <div class="tile">1</div>
-        <div class="tile">2</div>
-        <div class="tile">3</div>
-        <div class="tile">4</div>
-        <div class="tile">5</div>
-        <div class="tile">6</div>
-        <div class="tile">7</div>
-        <div class="tile">8</div>
-        <div class="tile"></div>
-    </div>
+          <div class="tile">1</div>
+          <div class="tile">2</div>
+          <div class="tile">3</div>
+          <div class="tile">4</div>
+          <div class="tile">5</div>
+          <div class="tile">6</div>
+          <div class="tile">7</div>
+          <div class="tile">8</div>
+          <div class="tile"></div>
+        </div>
         
-    	<button class="button" type="button" onclick="buttonRandom()">Randomize</button>
+    	
+      
         
 	</div>
 	<script src="slideGame.js"></script>
@@ -285,6 +305,21 @@ function toggleFunction() {
     } else {
         x.className = x.className.replace(" w3-show", "");
     }
+}
+function changeID()
+{
+  var x = document.getElementById('board');
+  
+  if(x.style.visibility === "visible")
+  {
+    x.style.visibility = "hidden";
+  }
+  else
+  {
+    x.style.visibility = "visible";
+  }
+  buttonRandom();
+  
 }
 </script>
 
