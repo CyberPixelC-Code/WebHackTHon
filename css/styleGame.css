@@ -39,3 +39,9 @@ body {
   background: none;
   border: none;
 }
+
+.button{
+  margin-left: 100px;
+  margin-top: 25px;
+  width: 100px;
+}
