@@ -1,8 +1,8 @@
-import * as echarts from 'echarts';
+
 
 var ROOT_PATH = 'https://echarts.apache.org/examples';
 
-var chartDom = document.getElementById('graph');
+var chartDom = document.getElementById('coolgraph');
 var myChart = echarts.init(chartDom);
 var option;
 
