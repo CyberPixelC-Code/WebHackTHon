@@ -1,132 +1,80 @@
-
-
-var ROOT_PATH = 'https://echarts.apache.org/examples';
-
 var chartDom = document.getElementById('coolgraph');
 var myChart = echarts.init(chartDom);
 var option;
+var solarVal = 0;
+var windVal = 0;
+var nucVal = 0;
 
-var paperDataSolar =
-  'css/images/solar';
-var paperDataWind = 'css/images/wind';
-var dataSmr = 'css/images/smr';
+myChart.showLoading();
+            
+$.get('data/gridwatch-3.json', {}, function(response) {
+   dataArr = response;
+   console.log(dataArr);
+   AddSolar();
+   AddWind();
+   AddNuc();
+   LoadGraph();
+});
 
-var average = 8844;
+function AddSolar(){
+	
+	for (let i = 0; i < dataArr.length; i++) {
+		solarVal += dataArr[i]['solar'] / 144;
+	}//End of loop
+	solarVal = Math.floor(solarVal);
+}//End of function
 
+function AddWind(){
+	for (let i = 0; i < dataArr.length; i++) {
+		windVal += dataArr[i]['wind'] / 144;
+	}//End of loop
+	windVal = Math.floor(windVal);
+}
+
+function AddNuc(){
+	for (let i = 0; i < dataArr.length; i++) {
+		nucVal += dataArr[i]['nuclear'] / 144;
+	}//End of loop
+	nucVal = Math.floor(nucVal);
+}
+
+function LoadGraph(){
 option = {
-  backgroundColor: '#0f375f',
-  tooltip: {},
-  legend: {
-    textStyle: { color: '#ddd' }
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'shadow'
+    }
+  },
+  grid: {
+    left: '3%',
+    right: '4%',
+    bottom: '3%',
+    containLabel: true
   },
   xAxis: [
     {
-      data: ['Christmas Wish List', 'Qomolangma', 'Kilimanjaro'],
-      axisTick: { show: false },
-      axisLine: { show: false },
-      axisLabel: {
-        margin: 20,
-        color: '#ddd',
-        fontSize: 14
+      type: 'category',
+      data: ['Wind', 'Solar', 'Nuclear'],
+      axisTick: {
+        alignWithLabel: true
       }
     }
   ],
-  yAxis: {
-    splitLine: { show: false },
-    axisTick: { show: false },
-    axisLine: { show: false },
-    axisLabel: { show: false }
-  },
-  markLine: {
-    z: -1
-  },
-  animationEasing: 'elasticOut',
+  yAxis: [
+    {
+      type: 'value'
+    }
+  ],
   series: [
     {
-      type: 'pictorialBar',
-      name: 'All',
-      emphasis: {
-        scale: true
-      },
-      label: {
-        show: true,
-        position: 'top',
-        formatter: '{c}',
-        fontSize: 16,
-        color: '#e54035'
-      },
-      data: [
-        {
-          value: 13000,
-          symbol: 'image:' + paperDataSolar,
-          symbolRepeat: true,
-          symbolSize: ['130%', '20%'],
-          symbolOffset: [0, 10],
-          symbolMargin: '-30%',
-          animationDelay: function (dataIndex, params) {
-            return params.index * 30;
-          }
-        },
-        {
-          value: 8844,
-          symbol:
-            'image://' + ROOT_PATH + '/data/asset/img/hill-Qomolangma.png',
-          symbolSize: ['200%', '105%'],
-          symbolPosition: 'end',
-          z: 10
-        },
-        {
-          value: 5895,
-          symbol:
-            'image://' + ROOT_PATH + '/data/asset/img/hill-Kilimanjaro.png',
-          symbolSize: ['200%', '105%'],
-          symbolPosition: 'end'
-        }
-      ],
-      markLine: {
-        symbol: ['none', 'none'],
-        label: {
-          show: false
-        },
-        lineStyle: {
-          color: '#e54035',
-          width: 2
-        },
-        data: [
-          {
-            yAxis: average
-          }
-        ]
-      }
-    },
-    {
-      name: 'All',
-      type: 'pictorialBar',
-      barGap: '-100%',
-      symbol: 'circle',
-      itemStyle: {
-        color: '#185491'
-      },
-      silent: true,
-      symbolOffset: [0, '50%'],
-      z: -10,
-      //The circles for the bottom of the image
-      data: [
-        {
-          value: 1,
-          symbolSize: ['150%', 50]
-        },
-        {
-          value: 1,
-          symbolSize: ['200%', 50]
-        },
-        {
-          value: 1,
-          symbolSize: ['200%', 50]
-        }
-      ]
+      name: 'Direct',
+      type: 'bar',
+      barWidth: '60%',
+      data: [windVal, solarVal, nucVal]
     }
   ]
 };
-
+myChart.hideLoading();
 option && myChart.setOption(option);
+}
