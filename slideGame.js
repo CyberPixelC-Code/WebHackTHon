@@ -105,5 +105,18 @@ gameBoard.addEventListener('click', (event) =>{
 
     }
     
+function changediv()
+{   
 
+    if (document.getElementById("#board-closed")) {
+        document.getElementById("board-closed").innerHTML=Date();          
+        document.getElementById("board-closed").setAttribute("id", "board");
+    }
+    else {
+        document.getElementById("board").innerHTML="teste";            
+        document.getElementById("board").setAttribute("id", "board-closed");
+    }
+
+
+}
 });
