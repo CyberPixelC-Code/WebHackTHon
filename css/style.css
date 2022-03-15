@@ -31,8 +31,8 @@ body, html {
 .flip-card{
   background-color: transparent;
   margin: auto;
-  width: 100%;
-  height: 300px;
+  width: 225px;
+  height: 225px;
   border: 1px solid red;
   perspective: 1000px;
 
