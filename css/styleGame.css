@@ -4,23 +4,38 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #1b1b1b;
-  height: 100vh;
+body, 
+.tile
+{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-#board {
-  display: flex;
-  flex-wrap: wrap;
-  width: 300px;
-  height: 300px;
+body {
+  background-color: #1b1b1b;
+  height: 100vh;
+  
 }
 
-.title {
+#board {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.tile {
+  position: absolute;
   border: 1px solid white;
   width: 100px;
   height: 100px;
+  color: rgba(228, 22, 22, 0);
+  font-size: 30px;
+  transition: top 0.2s linear, left 0.2s linear;
+  background: darkslategrey;
+  background-image: url(GameImage.png);
+}
+
+.tile:last-of-type{
+  background: none;
+  border: none;
 }
