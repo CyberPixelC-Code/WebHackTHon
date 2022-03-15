@@ -11,6 +11,9 @@
 <!--Game-->
 <link rel="stylesheet" href="css/styleGame.css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<script src="handler.js"></script>
+<script src="doomClock.js"></script>
 </head>
 <body>
 
@@ -48,9 +51,7 @@
 <!-- Container (DOOM Section) -->
 <div class="w3-content w3-container w3-padding-64" id="doom">
   <h3 class="w3-center">Dooms Day</h3>
-  <p id = "doomsdaycounter"> OOOPSSSSSYYYY! </p>
-  <script src="doomClock.js">
-</script>
+  <p id = "doomsdaycounter" class="doomsdaycounter"> OOOPSSSSSYYYY! </p>
   <div class="w3-row-padding w3-center">
     <!-- Card 1-->
     <div class="w3-col m3">
@@ -152,11 +153,28 @@
     </div>
     
   </div>
-  <div class="w3-row">
+
+  <!--Interactive button-->
+  <div class="w3-row-padding w3-center w3-section">
+      <div class="w3-col m3">
+        <div><button onclick="DayToggle()">Day</button></div>
+      </div>
+      <div class="w3-col m3">
+        <div><button onclick="NightToggle()">Night</button></div>
+      </div>
+      <div class="w3-col m3">
+        <div><button onclick="Change('Wind')">Wind</button></div>
+      </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+      <img src="css/GameImage.png" id="doomsImage" style="width: 400px; height: 300px;">
+  </div>
+  <!-- <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
       <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
-    </div>
+    </div> -->
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
@@ -180,6 +198,7 @@
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
   </div>
 </div>
+
 
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
