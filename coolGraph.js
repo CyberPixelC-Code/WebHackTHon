@@ -7,9 +7,9 @@ var myChart = echarts.init(chartDom);
 var option;
 
 var paperDataSolar =
-  'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.istockphoto.com%2Fvectors%2Fflat-solar-panel-icon-vector-id501279295%3Fk%3D6%26m%3D501279295%26s%3D612x612%26w%3D0%26h%3D_XS2MSj-Dlx1pFOt3y2ZjzQ5frIoCwaMJr6u2CzWa8A%3D&f=1&nofb=1';
-var paperDataWind = '';
-var dataSmr = '';
+  'css/images/solar';
+var paperDataWind = 'css/images/wind';
+var dataSmr = 'css/images/smr';
 
 var average = 8844;
 
@@ -58,7 +58,7 @@ option = {
       data: [
         {
           value: 13000,
-          symbol: 'image://' + paperDataSolar,
+          symbol: 'image:' + paperDataSolar,
           symbolRepeat: true,
           symbolSize: ['130%', '20%'],
           symbolOffset: [0, 10],
