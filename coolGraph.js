@@ -8,6 +8,7 @@ var dayText = document.getElementById('dayText');
 var windText = document.getElementById('windText');
 
 function StartPointGraph(){
+
 if (myChart != "")
 {
 	myChart.dispose();

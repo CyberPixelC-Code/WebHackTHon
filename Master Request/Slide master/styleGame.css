@@ -4,21 +4,25 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 50vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
 }
 
 #board {
+display: flex;
+flex-wrap: wrap;
+position:relative;
   width: 300px;
   height: 300px;
-  position: relative;
-  visibility: visible;
 }
 
-
+.text{
+	width: 100% !important;
+	height: 400px !important;
+}
 .tile {
   display: flex;
   justify-content: center;
@@ -34,37 +38,15 @@ body {
   background-image: url(GameImage_nuclear.png);
 }
 
-.tile_solar {
-  display: flex;
-  justify-content: center;
+
+body {
+  height: 75vw;
+ 
+    justify-content: center;
   align-items: center;
-  position: absolute;
-  border: 1px solid white;
-  width: 100px;
-  height: 100px;
-  color: rgba(228, 22, 22, 0);
-  font-size: 30px;
-  transition: top 0.2s linear, left 0.2s linear;
-  background: darkslategrey;
-  background-image: url(GameImage_solar.png);
 }
 
-.tile_wind {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  border: 1px solid white;
-  width: 100px;
-  height: 100px;
-  color: rgba(228, 22, 22, 0);
-  font-size: 30px;
-  transition: top 0.2s linear, left 0.2s linear;
-  background: darkslategrey;
-  background-image: url(GameImage_wind.png);
-}
-
-.tile:last-of-type{
+.tile:first-of-type{
   background: none;
   border: none;
 }
