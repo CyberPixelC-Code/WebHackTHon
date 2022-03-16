@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/TitleBarStyle.css">
 <!--Game-->
 <link rel="stylesheet" href="css/styleGame.css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -18,6 +19,7 @@
 <script src="echarts.js"></script>
 <script src="graphs.js"></script>
 <script src="jquery-2.2.4.js"></script>
+
 </head>
 <body>
 
@@ -27,12 +29,10 @@
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button">Back To Top</a>
-    <a href="#doom" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Dooms Day</a>
-    <a href="#smr" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> SMR</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
+    <a href="#home" class="w3-bar-item w3-btn w3-margin w3-green w3-round w3-large w3-wide titleBarText">Home</a>
+    <a href="#doom" class="w3-bar-item w3-btn w3-hide-small w3-margin w3-red w3-round w3-large w3-wide titleBarText">Dooms Day</a>
+    <a href="#smr" class="w3-bar-item w3-btn w3-margin w3-purple w3-round w3-large w3-wide titleBarText">SMR</a>
+    
   </div>
 
   <!-- Navbar on small screens -->
@@ -315,6 +315,7 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
 function changeID()
 {
   var x = document.getElementById('board');

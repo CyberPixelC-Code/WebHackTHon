@@ -71,7 +71,20 @@ option = {
       name: 'Direct',
       type: 'bar',
       barWidth: '60%',
-      data: [windVal, solarVal, nucVal]
+      data: [
+      	{
+      		value: windVal,
+      		itemStyle: {color: 'blue'}
+      	}, 
+      	{
+      		value: solarVal,
+      		itemStyle: {color: 'red'}
+      	}, 
+      	{
+      		value: nucVal,
+      		itemStyle: {color: 'green'}
+      	}
+      ]
     }
   ]
 };
