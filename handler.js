@@ -1,45 +1,28 @@
-var toggled = false;
+var isDay = false;
+var isWindy = false;
 
 function DayToggle()
 {
-    if (!toggled)
+    if (!isDay)
     {
-        document.getElementById("doomsImage").src = "css/images/sun.jpg";
-        toggled = true;
+        document.getElementById("doomsImage").src = "css/images/moon.jpg";
+        isDay = true;
     }
     else{
-        document.getElementById("doomsImage").src = "css/GameImage_nuclear.png";
-        toggled = false;
+        document.getElementById("doomsImage").src = "css/images/sun.jpg";
+        isDay = false;
     }
 }
 
-function NightToggle()
+function WindToggle()
 {
-    if (!toggled)
-    {
-        document.getElementById("doomsImage").src = "css/images/moon.jpg";
-        toggled = true;
-    }
-    else{
-        document.getElementById("doomsImage").src = "css/GameImage_nuclear.png";
-        toggled = false;
-    }
-}
-
-
-
-function Change(type)
-{
-    if(type == "Day")
-    {
-        document.getElementById("doomsImage").src = "css/images/sun.jpg";
-    }
-    else if(type == "Night")
-    {
-        document.getElementById("doomsImage").src = "css/images/moon.jpg";
-    }
-    else if(type == "Wind")
+    if (!isWindy)
     {
         document.getElementById("doomsImage").src = "css/images/wind-cartoon.jpg";
+        isWindy = true;
+    }
+    else{
+        document.getElementById("doomsImage").src = "css/wind-cartoon.png";
+        isWindy = false;
     }
 }
