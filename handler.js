@@ -5,24 +5,25 @@ function DayToggle()
 {
     if (!isDay)
     {
-        document.getElementById("doomsImage").src = "css/images/moon.jpg";
+    	//day time
         isDay = true;
+        
     }
     else{
-        document.getElementById("doomsImage").src = "css/images/sun.jpg";
+    	//day time
         isDay = false;
     }
+    StartPointGraph();
 }
 
 function WindToggle()
 {
     if (!isWindy)
     {
-        document.getElementById("doomsImage").src = "css/images/wind-cartoon.jpg";
         isWindy = true;
     }
     else{
-        document.getElementById("doomsImage").src = "css/wind-cartoon.png";
         isWindy = false;
     }
+    StartPointGraph();
 }
