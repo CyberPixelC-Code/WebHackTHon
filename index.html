@@ -36,6 +36,7 @@
     <a href="#home" class="w3-bar-item w3-btn w3-margin w3-green w3-round w3-large w3-wide titleBarText">Home</a>
     <a href="#doom" class="w3-bar-item w3-btn w3-hide-small w3-margin w3-red w3-round w3-large w3-wide titleBarText">Dooms Day</a>
     <a href="#smr" class="w3-bar-item w3-btn w3-hide-small w3-margin w3-purple w3-round w3-large w3-wide titleBarText">SMR</a>
+    <a href="#game" class="w3-bar-item w3-btn w3-hide-small w3-margin w3-text-white w3-brown w3-round w3-large w3-wide titleBarText">Challenges</a>
     
   </div>
 
@@ -60,11 +61,15 @@
 <!-- Container (DOOM Section) -->
 <div class="w3-content w3-container w3-padding-64" id="doom">
   <h3 class="w3-center" style='font-family: "Pacifico"; font-size: 50px; color: black;'>Deadline - 2030</h3>
-  <p class="w3-center"> This deadline will be a disaster date if we do not change </p>
+  <p class="w3-center infoStyle1"> This deadline will be a disaster date if we do not change </p>
     <div class="w3-center">
         <div class="loader" id="loader"></div> 
     </div> 
     <h1 id = "doomsdaycounter" class="doomsdaycounter"> </h1>
+    <h2 class="infoStyleH w3-text-black w3-center">Meanings of word and phrases</h2>
+    <p class="infoStyle1 w3-center">Power / Electricity, is the energy that charges mobiles and powers computers</p><br>
+    <p class="infoStyle1 w3-center">Radio-active waste, is a waste item that is fires off dangerous particiles</p><br>
+    <p class="infoStyle1 w3-center">Green House Gas means various types of gas are harmful to the planet</p><br>
   <div class="w3-row-padding w3-center">
     <!-- Card 1-->
     <div class="w3-col m3">
@@ -73,8 +78,8 @@
             <div class="flip-card-front">
               <img src="css/images/CardWind.png">
             </div>
-            <div class="flip-card-back w3-green">
-              <h1 class="w3-center">Turbins</h1>
+            <div class="flip-card-back w3-green infoStyle1">
+              <h1 class="w3-center infoStyleH">Turbins</h1>
               <p class="w3-center">Powered by: wind</p>
               <p class="w3-center">Produces no greenhouse gases</p>
             </div>
@@ -129,6 +134,7 @@
               <p>Powered by: Oil</p>
               <p>Produces green house gases</p>
               <p>Is this a good idea?</p>
+              <p>Not a clean energy</p>
             </div>
         </div>
       </div>
@@ -145,9 +151,10 @@
               <img src="css/images/CardCoal.png">
             </div>
             <div class="flip-card-back w3-red">
-              <h1>Coal Power Plant</h1>
-              <p>Powered by: Coal</p>
-              <P>It is clean energy</P>
+              <h1>Coal</h1>
+              <p>Can be burnt to produce power in a factory</p>
+              <p>This produces alot of greenhouse gases</p>
+              <p> It is not clean energy </p>
             </div>
         </div>
       </div>
@@ -161,9 +168,10 @@
               <img src="css/images/CardSolar.png">
             </div>
             <div class="flip-card-back w3-green">
-              <h1>Nuclear</h1>
-              <p>Produces power from nuclear reaction</p>
-              <P>It is clean energy</P>
+              <h1>Solar Panels</h1>
+              <p>Powered by: The Sun</p>
+              <p>Uses light to create power</p>
+              <p>This is clean energy</p>
             </div>
         </div>
       </div>
@@ -241,7 +249,7 @@
 </div>
 
 <!-- Third Parallax Image with Logo Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="game">
 
   <div class="w3-display-middle" style="white-space:nowrap;">
     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Game</span>
@@ -253,17 +261,22 @@
 <!-- Game1 -->
 <div class="w3-content w3-container w3-padding-64">
   <div class="w3-row-padding w3-center">
-    <div class="w3-col m4">
-      <input type="image" name="Name of image button" src="css/GameImage_nuclear.png" onclick="changeID()">
-    </div>
+  	<button class="w3-red w3-button w3-round w3-margin" onclick="changeID()">
+  	Tile Puzzle - Hard
+  	</button>
   
-    <div class="w3-col m4">
-      <input type="image" name="Name of image button" src="css/GameImage_solar.jpg" onclick="startGame()">
-    </div>
+  	<button class="w3-red w3-button w3-round w3-margin" onclick="">
+  	Word Search - Meadium
+  	</button>
   
-    <div class="w3-col m4">
-      <img src="css/GamePhoto_wind.jpg">
-    </div>
+  	<button class="w3-red w3-button w3-round w3-margin" onclick="">
+  	JigSaw - Easy
+  	</button>
+  
+  	<button class="w3-red w3-button w3-round w3-margin" onclick="">
+  	Challenge Mode
+  	</button>
+    
   </div>
   
   
@@ -291,16 +304,9 @@
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <p>For more infomation <a href="https://www.rolls-royce-smr.com/why-rolls-royce-smr" title="W3.CSS" target="_blank" class="w3-hover-text-green">Rolls-Royce SMR</a></p>
+  <a href="#home" class="w3-button w3-green"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+
+  <p class="w3-margin">For more infomation <a href="https://www.rolls-royce-smr.com/why-rolls-royce-smr" title="W3.CSS" target="_blank" class="w3-hover-text-green">Rolls-Royce SMR</a></p>
 </footer>
  
 <script>
