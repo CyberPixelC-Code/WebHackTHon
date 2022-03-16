@@ -35,7 +35,7 @@
     </a>
     
     <a href="#home" class="w3-bar-item w3-btn w3-margin w3-green w3-round w3-large w3-wide titleBarText">Home</a>
-    <a href="#doom" class="w3-bar-item w3-btn w3-hide-small w3-margin w3-red w3-round w3-large w3-wide titleBarText">Dooms Day</a>
+    <a href="#doom" class="w3-bar-item w3-btn w3-hide-small w3-margin w3-red w3-round w3-large w3-wide titleBarText">Deadline</a>
     <a href="#smr" class="w3-bar-item w3-btn w3-hide-small w3-margin w3-purple w3-round w3-large w3-wide titleBarText">SMR</a>
     <a href="#game" class="w3-bar-item w3-btn w3-hide-small w3-margin w3-text-white w3-brown w3-round w3-large w3-wide titleBarText">Challenges</a>
     
@@ -80,7 +80,7 @@
               <img src="css/images/CardWind.png">
             </div>
             <div class="flip-card-back w3-green infoStyle1">
-              <h1 class="w3-center infoStyleH">Turbins</h1>
+              <h1 class="w3-center infoStyleH">Turbines</h1>
               <p class="w3-center">Powered by: wind</p>
               <p class="w3-center">Produces no greenhouse gases</p>
             </div>
@@ -110,14 +110,14 @@
       <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="css/images/CardNuc.png">
+              <img src="css/GameImage_nuclear.png">
             </div>
             <div class="flip-card-back w3-yellow">
               <h1>Nuclear</h1>
-              <p class="w3-center">Powered by: Fusion</p>
-              <p class="w3-center">Produces nuclear waste</p>
-              <p>Only prodcues radioactive waste</p>
-              <p class="w3-center">Is there a way to reduce this?</p>
+              <p class="w3-center">Powered by: Fission</p>
+              <p class="w3-center">Produces no greenhouse gases</p>
+              <p>Only produces nuclear waste</p>
+              <p class="w3-center">Can be safely stored</p>
             </div>
         </div>
       </div>
@@ -180,7 +180,7 @@
     
   </div>
   
-  <h3 class="w3-center" style='font-family: "Pacifico"; font-size: 50px; color: black;'>Interactive Grpah</h3>
+  <h3 class="w3-center" style='font-family: "Pacifico"; font-size: 50px; color: black;'>Interactive Graph</h3>
   
   <p class="w3-center">Use the buttons below to change the sentence and see how power production changes</p>
 
@@ -253,7 +253,7 @@
 <div class="bgimg-3 w3-display-container w3-opacity-min" id="game">
 
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Game</span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Games</span>
   </div>
   
 </div>
@@ -270,12 +270,8 @@
   	<button class="w3-red w3-button w3-round w3-margin" onclick="ChangePage('wordsearch.html')">
   	Word Search - Medium
   	</button>
-  	
-  	<button class="w3-red w3-button w3-round w3-margin" onclick="changeID()">
-  	Tile Puzzle - Hard
-  	</button>
   
-  	<button class="w3-red w3-button w3-round w3-margin" onclick="">
+  	<button class="w3-red w3-button w3-round w3-margin" onclick="ChangePage('Master Request/Slide Master/index.html')">
   	Challenge Mode
   	</button>
     
@@ -284,22 +280,7 @@
   
 </div>
 
-<div class="w3-content w3-container w3-padding-64" id="game">
-     <div class="w3-container">
-        <div id="board">
-          <div class="tile">1</div>
-          <div class="tile">2</div>
-          <div class="tile">3</div>
-          <div class="tile">4</div>
-          <div class="tile">5</div>
-          <div class="tile">6</div>
-          <div class="tile">7</div>
-          <div class="tile">8</div>
-          <div class="tile"></div>
-        </div>
-	</div>
-	<script src="slideGame.js"></script>
-</div>
+
 
 <div id="floppyBird"></div>
 
