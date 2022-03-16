@@ -33,9 +33,16 @@ body, html {
   margin: auto;
   width: 225px;
   height: 225px;
-  border: 1px solid red;
   perspective: 1000px;
 
+}
+
+.flip-card-smr{
+  background-color: transparent;
+  margin: auto;
+  width: 450px;
+  height: 300px;
+  perspective: 1000px;
 }
 
 .flip-card-inner{
@@ -51,6 +58,9 @@ body, html {
   transform: rotateY(180deg);
 }
 
+.flip-card-smr:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
 .flip-card-front, .flip-card-back{
   position:absolute;
   width: 100%;
@@ -71,6 +81,11 @@ body, html {
 }
 
 .flip-card img{
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card-smr img{
   width: 100%;
   height: 100%;
 }
