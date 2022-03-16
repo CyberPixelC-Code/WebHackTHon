@@ -46,7 +46,7 @@
 
 body {
   height: 75vw;
-  background-image: linear-gradient(rgb(140, 190, 255), rgb(194, 191, 191));
+  /* background-image: linear-gradient(rgb(140, 190, 255), rgb(194, 191, 191)); */
   justify-content: center;
   align-items: center;
 }
