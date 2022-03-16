@@ -95,6 +95,13 @@ body, html {
   animation: spin 2s linear infinite;
 }
 
+.word-search, .jigsaw{
+  margin: auto;
+  height: 75%;
+  width: 45%;
+  border: 1px solid red;
+}
+
 @keyframes spin{
   0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}

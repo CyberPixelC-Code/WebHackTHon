@@ -257,18 +257,18 @@
     </div>
   
     <div class="w3-col m4">
-      <img src="css/GameImage_solar.jpg">
+      <input type="image" name="Name of image button" src="css/GameImage_solar.jpg" onclick="ToggleWord()">
     </div>
   
     <div class="w3-col m4">
-      <img src="css/GamePhoto_wind.jpg">
+      <input type="image" name="Name of image button" src="css/GamePhoto_wind.jpg" onclick="ToggleJigsaw()">
     </div>
   </div>
   
   
 </div>
 
-<div class="w3-content w3-container w3-padding-64">
+<div class="w3-content w3-container w3-padding-64" style="display: none;" id="game-wrapper">
      <div id="game" class="w3-container">
         <div id="board">
           <div class="tile">1</div>
@@ -335,17 +335,29 @@ function toggleFunction() {
 function changeID()
 {
   var x = document.getElementById('board');
+  var wordSearch = document.getElementById('word-search');
   
-  if(x.style.visibility === "visible")
+  if(x.style.display === "inherit")
   {
-    x.style.visibility = "hidden";
+      document.getElementById("game-wrapper").style.display = "none";
+      x.style.visibility = "hidden";
   }
   else
   {
-    x.style.visibility = "visible";
+      document.getElementById("game-wrapper").style.display = "inherit";
+      x.style.visibility = "visible";
+      wordSearch.style.display = "none";
   }
   buttonRandom();
-  
+
+}
+
+function ToggleWord(){
+    window.location.href = "wordsearch.html";
+}
+
+function ToggleJigsaw(){
+    window.location.href = "jigsaw.html";
 }
 </script>
 
