@@ -5,8 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/TitleBarStyle.css">
 <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
@@ -15,7 +18,6 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <script src="handler.js"></script>
-
 <script src="doomClock.js"></script>
 <script src="echarts.js"></script>
 <script src="graphs.js"></script>
@@ -57,8 +59,8 @@
 
 <!-- Container (DOOM Section) -->
 <div class="w3-content w3-container w3-padding-64" id="doom">
-  <h3 class="w3-center" style='font-family: "Pacifico"; font-size: 50px; color: black;'>Dooms Day</h3>
-  
+  <h3 class="w3-center" style='font-family: "Pacifico"; font-size: 50px; color: black;'>Deadline - 2030</h3>
+  <p class="w3-center"> This deadline will be a disaster date if we do not change </p>
     <div class="w3-center">
         <div class="loader" id="loader"></div> 
     </div> 
@@ -72,9 +74,9 @@
               <img src="css/images/CardWind.png">
             </div>
             <div class="flip-card-back w3-green">
-              <h1 class="w3-center">Wind Power</h1>
-              <p class="w3-center">Produces power by wind</p>
-              <p class="w3-center">It is clean energy</p>
+              <h1 class="w3-center">Turbins</h1>
+              <p class="w3-center">Powered by: wind</p>
+              <p class="w3-center">Produces no greenhouse gases</p>
             </div>
         </div>
       </div>
@@ -88,9 +90,10 @@
               <img src="css/images/CardWater.png">
             </div>
             <div class="flip-card-back w3-green">
-              <h1>Hydro</h1>
-              <p>Produces power from waves</p>
-              <P>It is clean energy</P>
+              <h1>Hydro Power</h1>
+              <p>Powered by: ocean, sea and rivers</p>
+              <p>Produces no greenhouse gases</p>
+              <p>Small impact on water life</p>
             </div>
         </div>
       </div>
@@ -103,10 +106,12 @@
             <div class="flip-card-front">
               <img src="css/images/CardNuc.png">
             </div>
-            <div class="flip-card-back w3-green">
+            <div class="flip-card-back w3-yellow">
               <h1>Nuclear</h1>
-              <p class="w3-center w3-padding-small">Produces power from nuclear reaction</p>
-              <p>It is clean energy</p>
+              <p class="w3-center">Powered by: Fusion</p>
+              <p class="w3-center">Produces nuclear waste</p>
+              <p>Only prodcues radioactive waste</p>
+              <p class="w3-center">Is there a way to reduce this?</p>
             </div>
         </div>
       </div>
@@ -121,8 +126,9 @@
             </div>
             <div class="flip-card-back w3-red">
               <h1>Oil</h1>
-              <p>Produces power by buring fossil fuels</p>
-              <P>It is unclean energy</P>
+              <p>Powered by: Oil</p>
+              <p>Produces green house gases</p>
+              <p>Is this a good idea?</p>
             </div>
         </div>
       </div>
@@ -139,8 +145,8 @@
               <img src="css/images/CardCoal.png">
             </div>
             <div class="flip-card-back w3-red">
-              <h1>Coal</h1>
-              <p>Produces power from nuclear reaction</p>
+              <h1>Coal Power Plant</h1>
+              <p>Powered by: Coal</p>
               <P>It is clean energy</P>
             </div>
         </div>
@@ -186,17 +192,12 @@
   </div>
   
   <p class="w3-center"> During the <a id="dayText"></a>, the wind is <a id="windText"></a> </p>
-
-
-  <!-- <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
-      <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
-    </div> -->
     
 <div id="coolgraph" style="width: 100%; height: 400px">
 	<script src="coolgraph.js"></script>
 </div>
+
+<p class="w3-center w3-text-blue"> Fun Fact: In the UK no oil is used to produce power</p>
 
 </div>
 
@@ -239,8 +240,8 @@
   </div>
 </div>
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min">
+<!-- Third Parallax Image with Logo Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
 
   <div class="w3-display-middle" style="white-space:nowrap;">
     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Game</span>
@@ -249,7 +250,7 @@
 </div>
 
 
-<!-- Game -->
+<!-- Game1 -->
 <div class="w3-content w3-container w3-padding-64">
   <div class="w3-row-padding w3-center">
     <div class="w3-col m4">
@@ -257,7 +258,7 @@
     </div>
   
     <div class="w3-col m4">
-      <img src="css/GameImage_solar.jpg">
+      <input type="image" name="Name of image button" src="css/GameImage_solar.jpg" onclick="startGame()">
     </div>
   
     <div class="w3-col m4">
@@ -268,8 +269,8 @@
   
 </div>
 
-<div class="w3-content w3-container w3-padding-64">
-     <div id="game" class="w3-container">
+<div class="w3-content w3-container w3-padding-64" id="game">
+     <div class="w3-container">
         <div id="board">
           <div class="tile">1</div>
           <div class="tile">2</div>
@@ -281,11 +282,11 @@
           <div class="tile">8</div>
           <div class="tile"></div>
         </div>
-      
-        
 	</div>
 	<script src="slideGame.js"></script>
 </div>
+
+<div id="floppyBird">
 
 
 <!-- Footer -->
