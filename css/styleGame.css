@@ -3,12 +3,18 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+body {
+  background-image: linear-gradient(rgb(0, 174, 255), rgb(53, 6, 59));
+  height: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #board {
   width: 300px;
   height: 300px;
   position: relative;
-  visibility: hidden;
+  visibility: visible;
 }
 
 

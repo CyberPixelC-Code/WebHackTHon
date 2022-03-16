@@ -4,8 +4,38 @@ const gameState = [
     [gameTiles[0], gameTiles[1], gameTiles[2]],
     [gameTiles[3], gameTiles[4], gameTiles[5]], 
     [gameTiles[6], gameTiles[7], gameTiles[8]],
+    
 ];
+var completed = true;
+function compare()
+{
+    completed = true;
+    var count = 0;
+    loop1:
+        for(var i = 0; i < 3; i++)
+        {
+            for(var j = 0; j < 3; j++)
+            {
+                console.log(gameState[i][j].innerHTML);
+                count++;
+                console.log(count)
+                
 
+                if(!(gameState[i][j].innerHTML === String(count)))
+                {
+                    completed = false;
+                    break loop1;
+                }
+                
+                console.log(completed);
+            }
+        }
+    
+    if(completed == true)
+    {
+        console.log("DONE");
+    }
+}
 
 function render(gameBoard, gameState)
 {
@@ -36,6 +66,7 @@ function moveElement(element1, element2)
 
     element2.style.top = tempTop;
     element2.style.left = tempLeft;
+    
 }
 function buttonRandom()
 {
@@ -49,7 +80,7 @@ function randomize()
     let emptyX, emptyY;
     gameState.forEach((row, rowIndex) => {
         row.forEach((column, columnIndex) => {
-            if(column.innerText === '')
+            if(column.innerText === '9')
             {
                 emptyX = rowIndex;
                 emptyY = columnIndex;
@@ -88,7 +119,7 @@ gameBoard.addEventListener('click', (event) =>{
     let emptyX, emptyY;
     gameState.forEach((row, rowIndex) => {
         row.forEach((column, columnIndex) => {
-            if(column.innerText === '')
+            if(column.innerText === '9')
             {
                 emptyX = rowIndex;
                 emptyY = columnIndex;
@@ -102,21 +133,8 @@ gameBoard.addEventListener('click', (event) =>{
         const temp = gameState[x][y];
         gameState[x][y] = gameState[emptyX][emptyY];
         gameState[emptyX][emptyY] = temp;
-
+        compare();
     }
     
-function changediv()
-{   
 
-    if (document.getElementById("#board-closed")) {
-        document.getElementById("board-closed").innerHTML=Date();          
-        document.getElementById("board-closed").setAttribute("id", "board");
-    }
-    else {
-        document.getElementById("board").innerHTML="teste";            
-        document.getElementById("board").setAttribute("id", "board-closed");
-    }
-
-
-}
 });
