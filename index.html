@@ -57,8 +57,8 @@
 <!-- Container (DOOM Section) -->
 <div class="w3-content w3-container w3-padding-64" id="doom">
   <h3 class="w3-center" style='font-family: "Pacifico"; font-size: 50px; color: black;'>Dooms Day</h3>
+  
     <div class="w3-center">
-      <script>myChart.showLoading();</script>
         <div class="loader" id="loader"></div> 
     </div> 
     <h1 id = "doomsdaycounter" class="doomsdaycounter"> </h1>
@@ -131,7 +131,7 @@
   
   <!--Card 5-->
   <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m8">
+    <div class="w3-col m6">
       <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -147,7 +147,7 @@
     </div>
     
     <!--Card 6-->
-    <div class="w3-col m3">
+    <div class="w3-col m6">
       <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -163,14 +163,22 @@
     </div>
     
   </div>
+  
+  <h3 class="w3-center" style='font-family: "Pacifico"; font-size: 50px; color: black;'>Interactive Grpah</h3>
 
   <!--Interactive button-->
   <div class="w3-row-padding w3-center w3-section">
-      <div class="w3-col m3">
-        <div><input type="button" onclick="DayToggle()" value="Day"></div>
+      <div class="w3-col m6">
+      
+        <button class="w3-button w3-padding w3-red w3-margin w3-round" onclick="DayToggle()">
+        Change The Time Of Day</button>
+        
       </div>
-      <div class="w3-col m3">
-        <div><input type="button" onclick="WindToggle()" value="Wind"></div>
+      <div class="w3-col m6">
+      
+        <button class="w3-button w3-padding w3-red w3-margin w3-round" onclick="DayToggle()">
+        Chnage The Wind</button>
+        
       </div>    
   </div>
 
@@ -265,8 +273,6 @@
           <div class="tile">8</div>
           <div class="tile"></div>
         </div>
-        
-    	
       
         
 	</div>

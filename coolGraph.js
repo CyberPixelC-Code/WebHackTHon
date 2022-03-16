@@ -5,6 +5,13 @@ var solarVal = 0;
 var windVal = 0;
 var nucVal = 0;
 
+function StartPointGraph(){
+if (myChart != "")
+{
+	myChart.dispose();
+	myChart = echarts.init(document.getElementById('coolgraph'));
+}
+
 myChart.showLoading();
             
 $.get('data/gridwatch-3.json', {}, function(response) {
@@ -15,21 +22,25 @@ $.get('data/gridwatch-3.json', {}, function(response) {
    AddNuc();
    LoadGraph();
 });
+}
 
 function AddSolar(){
-	
-	for (let i = 0; i < dataArr.length; i++) {
-		solarVal += dataArr[i]['solar'] / 144;
-	}//End of loop
-	solarVal = Math.floor(solarVal);
+	if (isDay === true){
+		for (let i = 0; i < dataArr.length; i++) {
+			solarVal += dataArr[i]['solar'] / 144;
+		}//End of loop
+		solarVal = Math.floor(solarVal);
+	}
 }//End of function
 
 function AddWind(){
-	for (let i = 0; i < dataArr.length; i++) {
-		windVal += dataArr[i]['wind'] / 144;
-	}//End of loop
-	windVal = Math.floor(windVal);
-}
+	if (isWindy === true){
+		for (let i = 0; i < dataArr.length; i++) {
+			windVal += dataArr[i]['wind'] / 144;
+		}//End of loop
+		windVal = Math.floor(windVal);
+	}
+}//end of function
 
 function AddNuc(){
 	for (let i = 0; i < dataArr.length; i++) {
@@ -91,3 +102,5 @@ option = {
 myChart.hideLoading();
 option && myChart.setOption(option);
 }
+
+StartPointGraph();
