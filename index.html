@@ -105,7 +105,7 @@
             <div class="flip-card-back">
               <h1>Nuclear</h1>
               <p>Produces power from nuclear reaction</p>
-              <P>It is clean energy</P>
+              <p>It is clean energy</p>
             </div>
         </div>
       </div>
@@ -165,6 +165,8 @@
   </div>
   
   <h3 class="w3-center" style='font-family: "Pacifico"; font-size: 50px; color: black;'>Interactive Grpah</h3>
+  
+  <p class="w3-center">Use the buttons below to change the sentence and see how power production changes</p>
 
   <!--Interactive button-->
   <div class="w3-row-padding w3-center w3-section">
@@ -176,11 +178,13 @@
       </div>
       <div class="w3-col m6">
       
-        <button class="w3-button w3-padding w3-red w3-margin w3-round" onclick="DayToggle()">
-        Chnage The Wind</button>
+        <button class="w3-button w3-padding w3-red w3-margin w3-round" onclick="WindToggle()">
+        Change The Wind</button>
         
       </div>    
   </div>
+  
+  <p class="w3-center"> During the <a id="dayText"></a>, the wind is <a id="windText"></a> </p>
 
   <!-- <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">

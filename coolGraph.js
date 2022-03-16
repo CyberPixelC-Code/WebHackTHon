@@ -4,12 +4,17 @@ var option;
 var solarVal = 0;
 var windVal = 0;
 var nucVal = 0;
+var dayText = document.getElementById('dayText');
+var windText = document.getElementById('windText');
 
 function StartPointGraph(){
 if (myChart != "")
 {
 	myChart.dispose();
 	myChart = echarts.init(document.getElementById('coolgraph'));
+	nucVal = 0;
+	solarVal = 0;
+	windVal = 0;
 }
 
 myChart.showLoading();
@@ -22,6 +27,7 @@ $.get('data/gridwatch-3.json', {}, function(response) {
    AddNuc();
    LoadGraph();
 });
+
 }
 
 function AddSolar(){
@@ -30,6 +36,10 @@ function AddSolar(){
 			solarVal += dataArr[i]['solar'] / 144;
 		}//End of loop
 		solarVal = Math.floor(solarVal);
+		dayText.innerHTML = "daytime";
+	}
+	else{
+		dayText.innerHTML = "night";
 	}
 }//End of function
 
@@ -39,6 +49,10 @@ function AddWind(){
 			windVal += dataArr[i]['wind'] / 144;
 		}//End of loop
 		windVal = Math.floor(windVal);
+		windText.innerHTML = "blowing";
+	}
+	else{
+		windText.innerHTML = "not blowing";
 	}
 }//end of function
 
