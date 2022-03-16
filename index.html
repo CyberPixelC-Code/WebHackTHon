@@ -27,9 +27,10 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <a class="w3-bar-item w3-hover-purple w3-hide-medium w3-hide-large w3-right w3-margin w3-large titleBarText" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
+    
     <a href="#home" class="w3-bar-item w3-btn w3-margin w3-green w3-round w3-large w3-wide titleBarText">Home</a>
     <a href="#doom" class="w3-bar-item w3-btn w3-hide-small w3-margin w3-red w3-round w3-large w3-wide titleBarText">Dooms Day</a>
     <a href="#smr" class="w3-bar-item w3-btn w3-hide-small w3-margin w3-purple w3-round w3-large w3-wide titleBarText">SMR</a>
@@ -38,9 +39,9 @@
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#DOOM" class="w3-bar-item w3-button" onclick="toggleFunction()">Dooms Day</a>
+    <a href="#doom" class="w3-bar-item w3-button" onclick="toggleFunction()">Dooms Day</a>
     
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">SMR</a>
+    <a href="#smr" class="w3-bar-item w3-button" onclick="toggleFunction()">SMR</a>
     <a href="#" class="w3-bar-item w3-button"></a>
   </div>
 </div>
@@ -70,10 +71,10 @@
             <div class="flip-card-front">
               <img src="css/images/CardWind.png">
             </div>
-            <div class="flip-card-back">
-              <h1>Wind Power</h1>
-              <p>Produces power by wind</p>
-              <P>It is clean energy</P>
+            <div class="flip-card-back w3-green">
+              <h1 class="w3-center">Wind Power</h1>
+              <p class="w3-center">Produces power by wind</p>
+              <p class="w3-center">It is clean energy</p>
             </div>
         </div>
       </div>
@@ -86,7 +87,7 @@
             <div class="flip-card-front">
               <img src="css/images/CardWater.png">
             </div>
-            <div class="flip-card-back">
+            <div class="flip-card-back w3-green">
               <h1>Hydro</h1>
               <p>Produces power from waves</p>
               <P>It is clean energy</P>
@@ -102,9 +103,9 @@
             <div class="flip-card-front">
               <img src="css/images/CardNuc.png">
             </div>
-            <div class="flip-card-back">
+            <div class="flip-card-back w3-green">
               <h1>Nuclear</h1>
-              <p>Produces power from nuclear reaction</p>
+              <p class="w3-center w3-padding-small">Produces power from nuclear reaction</p>
               <p>It is clean energy</p>
             </div>
         </div>
@@ -118,7 +119,7 @@
             <div class="flip-card-front">
               <img src="css/images/CardOil.png">
             </div>
-            <div class="flip-card-back">
+            <div class="flip-card-back w3-red">
               <h1>Oil</h1>
               <p>Produces power by buring fossil fuels</p>
               <P>It is unclean energy</P>
@@ -137,7 +138,7 @@
             <div class="flip-card-front">
               <img src="css/images/CardCoal.png">
             </div>
-            <div class="flip-card-back">
+            <div class="flip-card-back w3-red">
               <h1>Coal</h1>
               <p>Produces power from nuclear reaction</p>
               <P>It is clean energy</P>
@@ -153,7 +154,7 @@
             <div class="flip-card-front">
               <img src="css/images/CardSolar.png">
             </div>
-            <div class="flip-card-back">
+            <div class="flip-card-back w3-green">
               <h1>Nuclear</h1>
               <p>Produces power from nuclear reaction</p>
               <P>It is clean energy</P>
@@ -326,7 +327,7 @@ window.onscroll = function() {myFunction()};
 function myFunction() {
     var navbar = document.getElementById("myNavbar");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-blue";
     } else {
         navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
     }
