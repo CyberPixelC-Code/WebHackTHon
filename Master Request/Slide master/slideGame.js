@@ -9,6 +9,7 @@ const gameState = [
 var count = 0;
 var completed = true;
 var percent = 0;
+var started = false;
 
 function compare()
 {

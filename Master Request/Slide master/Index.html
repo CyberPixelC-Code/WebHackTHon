@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<link rel="stylesheet" href="styleGame.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<script src="echarts.js"></script>
+<script src="graphs.js"></script>
+</head>
+<body>
+  <div class="w3-row-padding w3-center">
+      <div class="w3-col m12 w3-padding">
+    <img src = "RL_logo3.gif">
+  </div>
+  </div>
+     <div id="game" class="w3-container gameCenter">
+      
+        <div id="board">
+        <div class="tile">1</div>
+        <div class="tile">2</div>
+        <div class="tile">3</div>
+        <div class="tile">4</div>
+        <div class="tile">5</div>
+        <div class="tile">6</div>
+        <div class="tile">7</div>
+        <div class="tile">8</div>
+        <div class="tile">9</div>
+        </div>
+        
+        
+    </div>
+    <div class="w3-row-padding w3-center">
+      <div class="w3-col m12">
+        <p class="w3-center" id="finish" style="display: none;">Well Done you have finished the game!</p>
+              
+        <p class="w3-margin-left w3-margin-top" >Counter: <a id="countme">0</a></p>
+
+        <button class="w3-button w3-padding-large w3-margin" onclick="clickme()" id="next" style="background-color: rgb(170, 156, 156); color: white">Next</button>
+
+        <button class="w3-padding w3-button" id="startMe" onclick="startGame()" style="background-color: rgb(81, 189, 81); color: rgb(255, 255, 255)">Start Game</button>
+
+        <p>Must reach the goal of 16 SMR euqal to 470*16 mW</p>
+      
+        <script src="slideGame.js"></script>
+        <div id="graph" style="width: 100%; height: 400px;">
+        <script src="Graph.js"></script>
+      </div>
+      
+              
+      </div>
+    </div>
+    
+    
+    
+    
+
+</body>
+<script>
+function clickme(){
+  if(started)
+  {
+    buttonRandom();
+    StartPointGraph();
+  }
+}
+
+function startGame(){
+  if(!started)
+  {
+    started = true;
+    var x = document.getElementById('next');
+      
+      
+        x.style.background = "rgb(16, 112, 190)";
+        var y = document.getElementById('startMe');
+        y.style.background = "rgb(170, 156, 156)";
+      
+      startRan();
+  }
+}
+</script>
+</html>
